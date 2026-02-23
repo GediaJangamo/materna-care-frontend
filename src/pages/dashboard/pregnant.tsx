@@ -60,7 +60,7 @@ const trimesterMilestones = [
     { week: 36, label: "Parto Planeado", done: false },
 ];
 
-export default function Dashboard() {
+export default function Dashboard(user: any) {
     const [riskLevel] = useState("low");
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const risk = riskConfig[riskLevel];

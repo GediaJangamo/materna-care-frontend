@@ -90,7 +90,7 @@ function AlertaCard({ alerta }: any) {
     );
 }
 
-export default function ProfessionalDashboard() {
+export default function ProfessionalDashboard(user: any) {
     return (
         <div className="min-h-screen p-2">
 

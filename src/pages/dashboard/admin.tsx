@@ -30,7 +30,7 @@ const mockAtividade = [
 
 const maxBar = Math.max(...mockAtividade.map((m) => m.consultas));
 
-export default function AdminDashboard() {
+export default function AdminDashboard(user: any) {
     return (
         <div className="min-h-screen bg-slate-50 p-2">
 
