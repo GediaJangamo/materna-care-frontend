@@ -133,7 +133,7 @@ export default function ProfessionalLayout({
                                 MaternaCare
                             </span> */}
                             <span className="ml-auto rounded-full border border-pink-200 bg-pink-50 px-2.5 py-0.5 text-[0.6rem] font-bold uppercase tracking-widest text-pink-500">
-                                Gestante
+                                Admin
                             </span>
                         </div>
 

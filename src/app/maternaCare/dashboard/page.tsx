@@ -1,13 +1,12 @@
 'use client'
+import AdminDashboard from "@/pages/dashboard/admin";
 import PregnantDashboard from "@/pages/dashboard/pregnant";
 import ProfessionalDashboard from "@/pages/dashboard/professional";
 import { useState, useEffect } from "react";
 
-
-
 const MOCK_USER: any = {
-    role: "professional",
-    name: "Ana Beatriz Machava",
+    role: "pregnant",
+    name: "Pedro da Silva",
     email: "ana.beatriz@email.com",
     weeksPregnant: 24,
     nextAppointment: "2026-02-20",
@@ -31,6 +30,7 @@ export default function DashboardRouter() {
 
     if (user?.role === "pregnant") return <PregnantDashboard user={user} />;
     if (user?.role === "professional") return <ProfessionalDashboard user={user} />;
+    if (user?.role === "admin") return <AdminDashboard user={user} />;
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
