@@ -1,7 +1,6 @@
 'use client'
-import NewAppointment from "@/pages/appointment/pregnantAppointment";
-import AdminDashboard from "@/pages/dashboard/admin";
-import PregnantDashboard from "@/pages/dashboard/pregnant";
+import NewAppointment from "@/pages/appointment/newPregnantAppointment";
+import ListAppointment from "@/pages/appointment/pregnantAppointment";
 import ProfessionalDashboard from "@/pages/dashboard/professional";
 import { useState, useEffect } from "react";
 

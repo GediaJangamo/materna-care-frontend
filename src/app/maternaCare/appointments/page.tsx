@@ -1,7 +1,5 @@
 'use client'
-import NewAppointment from "@/pages/appointment/pregnantAppointment";
-import AdminDashboard from "@/pages/dashboard/admin";
-import PregnantDashboard from "@/pages/dashboard/pregnant";
+import ListAppointment from "@/pages/appointment/pregnantAppointment";
 import ProfessionalDashboard from "@/pages/dashboard/professional";
 import { useState, useEffect } from "react";
 
@@ -29,7 +27,7 @@ export default function AppointmentRouter() {
         return () => clearTimeout(t);
     }, []);
 
-    if (user?.role === "pregnant") return <NewAppointment user={user} />;
+    if (user?.role === "pregnant") return <ListAppointment user={user} />;
     if (user?.role === "professional") return <ProfessionalDashboard user={user} />;
 
     return (
