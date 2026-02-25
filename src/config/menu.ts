@@ -6,8 +6,6 @@ import {
   Users,
   BarChart3,
   User,
-  Building,
-  LucideGitBranch,
 
 } from "lucide-react";
 
@@ -34,21 +32,13 @@ export const menuItemsByRole = {
       href: "/maternaCare/monitoring",
       icon: BarChart3,
     },
-    {
-      title: "Hospitals",
-      href: "/maternaCare/hospitals",
-      icon: Building,
-    },
+   
     {
       title: "Messages",
       href: "/maternaCare/messages",
       icon: MessageSquare,
     },
-    {
-      title: "Education",
-      href: "/maternaCare/education",
-      icon: LucideGitBranch,
-    },
+  
     {
       title: "Profile",
       href: "/maternaCare/profile",
@@ -103,11 +93,7 @@ export const menuItemsByRole = {
       href: "/maternaCare/professionals",
       icon: Users,
     },
-   {
-      title: "Hospitals",
-      href: "/maternaCare/hospitals",
-      icon: Building,
-    },
+ 
    {
       title: "Reports",
       href: "/maternaCare/reports",
