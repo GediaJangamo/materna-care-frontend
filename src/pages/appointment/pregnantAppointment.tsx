@@ -100,7 +100,7 @@ export default function ListAppointment(user: any) {
 
 
     return (
-        <div className="min-h-screen bg-rose-50/40">
+        <div className="min-h-screen bg-gray-50">
 
             {/* ── Page content ── */}
             <div className="p-8">
