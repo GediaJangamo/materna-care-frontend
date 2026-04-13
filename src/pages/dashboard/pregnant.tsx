@@ -75,23 +75,17 @@ export default function Dashboard(user: any) {
 
     return (
         <div className="min-h-screen bg-gray-50 font-sans">
+            <div className="flex flex-col min-h-screen">
+                <main className="flex-1 p-4 sm:p-6 space-y-4 sm:space-y-6  w-full ">
 
-            {/* Main Content */}
-            <div className=" flex flex-col min-h-screen">
-
-                {/* Page Content */}
-                <main className="flex-1 p-6 space-y-6  mx-auto w-full">
-
-                    {/* ── Hero Card: Semana Gestacional ── */}
-                    <div className="relative bg-gradient-to-br from-rose-500 via-pink-500 to-purple-600 rounded-3xl p-6 overflow-hidden shadow-xl shadow-pink-200/40">
-                        {/* BG blobs */}
+                    {/* ── Hero Card ── */}
+                    <div className="relative bg-gradient-to-br from-rose-500 via-pink-500 to-purple-600 rounded-3xl p-4 sm:p-6 overflow-hidden shadow-xl shadow-pink-200/40">
                         <div className="absolute top-[-40px] right-[-40px] w-48 h-48 bg-white/10 rounded-full blur-2xl" />
                         <div className="absolute bottom-[-20px] left-[-20px] w-32 h-32 bg-purple-800/20 rounded-full blur-2xl" />
 
-                        <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6">
-                            {/* Left: week info */}
+                        <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
                             <div className="flex-1">
-                                <div className="flex items-center gap-2 mb-1">
+                                <div className="flex flex-wrap items-center gap-2 mb-1">
                                     <div className="bg-white/20 rounded-full px-3 py-1 text-xs font-bold text-white">
                                         {trimester}
                                     </div>
@@ -99,12 +93,11 @@ export default function Dashboard(user: any) {
                                         {daysLeft} dias restantes
                                     </div>
                                 </div>
-                                <h2 className="text-5xl font-black text-white mt-2">
+                                <h2 className="text-4xl sm:text-5xl font-black text-white mt-2">
                                     Semana <span className="text-yellow-300">{currentWeek}</span>
                                 </h2>
-                                <p className="text-pink-100 mt-1 text-sm">de {totalWeeks} semanas · Bebé do tamanho de um pepino 🥒</p>
+                                <p className="text-pink-100 mt-1 text-sm">de {totalWeeks} semanas · Bebé do tamanho de um pepino </p>
 
-                                {/* Progress bar */}
                                 <div className="mt-4">
                                     <div className="flex justify-between text-xs text-pink-200 mb-1.5">
                                         <span>Progresso da gravidez</span>
@@ -119,12 +112,11 @@ export default function Dashboard(user: any) {
                                 </div>
                             </div>
 
-                            {/* Right: baby icon */}
-                            <div className="flex-shrink-0 flex items-center justify-center">
-                                <div className="relative w-28 h-28">
+                            <div className="flex-shrink-0 flex items-center justify-center self-center">
+                                <div className="relative w-24 h-24 sm:w-28 sm:h-28">
                                     <div className="absolute inset-0 bg-white/20 backdrop-blur rounded-full border-2 border-white/30" />
                                     <div className="relative flex items-center justify-center w-full h-full">
-                                        <Baby className="w-16 h-16 text-white" />
+                                        <Baby className="w-14 h-14 sm:w-16 sm:h-16 text-white" />
                                     </div>
                                     <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-4 h-4 bg-yellow-300 rounded-full animate-bounce" />
                                     <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-3 h-3 bg-pink-200 rounded-full animate-bounce" style={{ animationDelay: "0.3s" }} />
@@ -134,10 +126,9 @@ export default function Dashboard(user: any) {
                     </div>
 
                     {/* ── Key Metrics Row ── */}
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
 
-                        {/* Data Provável do Parto */}
-                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 sm:p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
                             <div className="bg-rose-50 rounded-xl p-3 flex-shrink-0">
                                 <Calendar className="w-5 h-5 text-rose-500" />
                             </div>
@@ -148,8 +139,7 @@ export default function Dashboard(user: any) {
                             </div>
                         </div>
 
-                        {/* Próxima Consulta */}
-                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 sm:p-5 flex items-start gap-4 hover:shadow-md transition-shadow">
                             <div className="bg-purple-50 rounded-xl p-3 flex-shrink-0">
                                 <Clock className="w-5 h-5 text-purple-500" />
                             </div>
@@ -160,8 +150,7 @@ export default function Dashboard(user: any) {
                             </div>
                         </div>
 
-                        {/* Status de Risco */}
-                        <div className={`rounded-2xl border shadow-sm p-5 flex items-start gap-4 hover:shadow-md transition-shadow ${risk.bg} ${risk.border}`}>
+                        <div className={`rounded-2xl border shadow-sm p-4 sm:p-5 flex items-start gap-4 hover:shadow-md transition-shadow ${risk.bg} ${risk.border}`}>
                             <div className="bg-white rounded-xl p-3 flex-shrink-0 shadow-sm">
                                 <Shield className={`w-5 h-5 ${risk.color}`} />
                             </div>
@@ -179,10 +168,9 @@ export default function Dashboard(user: any) {
                     </div>
 
                     {/* ── Alerts + Vitals ── */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
 
-                        {/* Alertas */}
-                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
                             <div className="flex items-center justify-between mb-4">
                                 <h3 className="text-sm font-black text-gray-900 uppercase tracking-wide">Alertas & Notificações</h3>
                                 <span className="text-xs font-bold bg-pink-100 text-pink-600 px-2 py-1 rounded-full">{alerts.length}</span>
@@ -204,20 +192,19 @@ export default function Dashboard(user: any) {
                             </div>
                         </div>
 
-                        {/* Vitais */}
-                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
+                        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
                             <div className="flex items-center justify-between mb-4">
                                 <h3 className="text-sm font-black text-gray-900 uppercase tracking-wide">Sinais Vitais</h3>
                                 <button className="text-xs text-pink-500 font-bold hover:text-pink-600 transition-colors">Ver histórico →</button>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
                                 {vitals.map(({ label, value, unit, icon: Icon, change, color, bg }) => (
-                                    <div key={label} className={`${bg} rounded-xl p-4`}>
+                                    <div key={label} className={`${bg} rounded-xl p-3 sm:p-4`}>
                                         <div className="flex items-center gap-2 mb-2">
-                                            <Icon className={`w-4 h-4 ${color}`} />
-                                            <span className="text-xs font-bold text-gray-600">{label}</span>
+                                            <Icon className={`w-4 h-4 flex-shrink-0 ${color}`} />
+                                            <span className="text-xs font-bold text-gray-600 truncate">{label}</span>
                                         </div>
-                                        <p className={`text-xl font-black ${color}`}>
+                                        <p className={`text-lg sm:text-xl font-black ${color}`}>
                                             {value}<span className="text-xs font-semibold ml-1">{unit}</span>
                                         </p>
                                         <p className="text-xs text-gray-500 mt-1">{change}</p>
@@ -228,34 +215,59 @@ export default function Dashboard(user: any) {
                     </div>
 
                     {/* ── Milestones Timeline ── */}
-                    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-                        <div className="flex items-center justify-between mb-6">
+                    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-5 sm:p-6">
+                        <div className="flex items-center justify-between mb-5 sm:mb-6">
                             <h3 className="text-sm font-black text-gray-900 uppercase tracking-wide">Linha do Tempo Gestacional</h3>
                             <div className="flex items-center gap-2 text-xs text-gray-500">
                                 <TrendingUp className="w-3.5 h-3.5" />
-                                <span>Semana {currentWeek} de {totalWeeks}</span>
+                                <span>Sem {currentWeek} de {totalWeeks}</span>
                             </div>
                         </div>
 
-                        <div className="relative">
-                            {/* Line */}
+                        {/* Mobile: vertical */}
+                        <div className="flex flex-col gap-3 sm:hidden">
+                            {trimesterMilestones.map((m, i) => (
+                                <div key={i} className="flex items-center gap-4">
+                                    <div className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 border-2 transition-all ${m.current
+                                        ? "bg-gradient-to-br from-pink-500 to-purple-600 border-pink-500 shadow-md shadow-pink-200"
+                                        : m.done
+                                            ? "bg-white border-purple-400"
+                                            : "bg-gray-50 border-gray-200"
+                                        }`}>
+                                        {m.current ? (
+                                            <Star className="w-4 h-4 text-white fill-white" />
+                                        ) : m.done ? (
+                                            <CheckCircle className="w-4 h-4 text-purple-500" />
+                                        ) : (
+                                            <span className="text-[10px] font-black text-gray-400">{m.week}w</span>
+                                        )}
+                                    </div>
+                                    <div>
+                                        <p className={`text-sm font-bold ${m.current ? "text-pink-600" : m.done ? "text-purple-600" : "text-gray-400"}`}>
+                                            {m.label}
+                                        </p>
+                                        <p className="text-xs text-gray-400">Semana {m.week}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Desktop: horizontal */}
+                        <div className="relative hidden sm:block">
                             <div className="absolute top-5 left-5 right-5 h-0.5 bg-gray-100" />
                             <div
                                 className="absolute top-5 left-5 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 transition-all duration-700"
                                 style={{ width: `${Math.min(((trimesterMilestones.findIndex(m => m.current) + 1) / trimesterMilestones.length) * 100, 100)}%` }}
                             />
-
                             <div className="relative flex justify-between">
                                 {trimesterMilestones.map((m, i) => (
                                     <div key={i} className="flex flex-col items-center gap-2" style={{ width: `${100 / trimesterMilestones.length}%` }}>
-                                        <div
-                                            className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 border-2 z-10 transition-all ${m.current
-                                                ? "bg-gradient-to-br from-pink-500 to-purple-600 border-pink-500 shadow-lg shadow-pink-200"
-                                                : m.done
-                                                    ? "bg-white border-purple-400"
-                                                    : "bg-gray-50 border-gray-200"
-                                                }`}
-                                        >
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 border-2 z-10 transition-all ${m.current
+                                            ? "bg-gradient-to-br from-pink-500 to-purple-600 border-pink-500 shadow-lg shadow-pink-200"
+                                            : m.done
+                                                ? "bg-white border-purple-400"
+                                                : "bg-gray-50 border-gray-200"
+                                            }`}>
                                             {m.current ? (
                                                 <Star className="w-4 h-4 text-white fill-white" />
                                             ) : m.done ? (
@@ -279,30 +291,28 @@ export default function Dashboard(user: any) {
                     </div>
 
                     {/* ── Next Appointment Detail ── */}
-                    <div className="bg-gradient-to-br from-purple-600 to-pink-500 rounded-2xl p-6 shadow-xl shadow-purple-200/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div className="bg-gradient-to-br from-purple-600 to-pink-500 rounded-2xl p-5 sm:p-6 shadow-xl shadow-purple-200/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            <div className="bg-white/20 rounded-xl p-3">
+                            <div className="bg-white/20 rounded-xl p-3 flex-shrink-0">
                                 <Calendar className="w-6 h-6 text-white" />
                             </div>
                             <div>
                                 <p className="text-pink-200 text-xs font-bold uppercase tracking-wide">Próxima Consulta</p>
-                                <p className="text-white font-black text-lg">{nextAppointment.date} às {nextAppointment.time}</p>
+                                <p className="text-white font-black text-base sm:text-lg">{nextAppointment.date} às {nextAppointment.time}</p>
                                 <p className="text-pink-100 text-sm">{nextAppointment.doctor} · {nextAppointment.type}</p>
                             </div>
                         </div>
-                        <div className="flex gap-2">
-                            <button className="bg-white/20 hover:bg-white/30 text-white font-bold text-sm px-4 py-2.5 rounded-xl border border-white/20 transition-all">
+                        <div className="flex gap-2 w-full sm:w-auto">
+                            <button className="bg-white/20 hover:bg-white/30 text-white font-bold text-sm px-4 py-2.5 rounded-xl border border-white/20 transition-all flex-1 sm:flex-none">
                                 Reagendar
                             </button>
-                            <button className="bg-white text-purple-600 hover:bg-pink-50 font-bold text-sm px-4 py-2.5 rounded-xl shadow-md transition-all">
+                            <button className="bg-white text-purple-600 hover:bg-pink-50 font-bold text-sm px-4 py-2.5 rounded-xl shadow-md transition-all flex-1 sm:flex-none">
                                 Ver detalhes
                             </button>
                         </div>
                     </div>
 
                 </main>
-
-
             </div>
         </div>
     );
