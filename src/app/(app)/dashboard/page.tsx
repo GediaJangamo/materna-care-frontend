@@ -1,7 +1,7 @@
 'use client'
-import NewAppointment from "@/pages/appointment/newPregnantAppointment";
-import ListAppointment from "@/pages/appointment/pregnantAppointment";
-import ProfessionalDashboard from "@/pages/dashboard/professional";
+import AdminDashboard from "@/components/dashboard/admin/admin";
+import PregnantDashboard from "@/components/dashboard/pregnant/pregnant";
+import ProfessionalDashboard from "@/components/dashboard/professional/professional";
 import { useState, useEffect } from "react";
 
 const MOCK_USER = {
@@ -16,7 +16,7 @@ const MOCK_USER = {
     licenseNumber: "MZ-OB-2024-0192",
 };
 
-export default function NewAppointmentRouter() {
+export default function DashboardRouter() {
     const [user, setUser] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
@@ -28,8 +28,9 @@ export default function NewAppointmentRouter() {
         return () => clearTimeout(t);
     }, []);
 
-    if (user?.role === "pregnant") return <NewAppointment user={user} />;
+    if (user?.role === "pregnant") return <PregnantDashboard user={user} />;
     if (user?.role === "professional") return <ProfessionalDashboard user={user} />;
+    if (user?.role === "admin") return <AdminDashboard user={user} />;
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">

@@ -705,8 +705,8 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>© 2026 MaternaCare - Todos os direitos reservados</p>
-            <p className="mt-2 text-sm">Desenvolvido com ❤️ para as mães de Moçambique</p>
+            <p> © 2026 Gédia Jangamo - Todos os direitos reservados</p>
+            <p className="mt-2 text-sm">Desenvolvido com carinho para as mães de Moçambique</p>
           </div>
         </div>
       </footer>

@@ -1,9 +1,9 @@
 "use client";
 
 import { UserRole } from "@/enums/roles";
-import AdminDashboard from "@/pages/dashboard/admin";
-import PregnantDashboard from "@/pages/dashboard/pregnant";
-import ProfessionalDashboard from "@/pages/dashboard/professional";
+import AdminDashboard from "@/components/dashboard/admin/admin";
+import PregnantDashboard from "@/components/dashboard/pregnant/pregnant";
+import ProfessionalDashboard from "@/components/dashboard/professional/professional";
 
 
 export default function DashboardPage() {

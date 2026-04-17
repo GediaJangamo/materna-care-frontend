@@ -1,6 +1,6 @@
 'use client'
 import ListAppointment from "@/pages/appointment/pregnantAppointment";
-import ProfessionalDashboard from "@/pages/dashboard/professional";
+import ProfessionalDashboard from "@/components/dashboard/professional/professional";
 import { useState, useEffect } from "react";
 
 const MOCK_USER = {

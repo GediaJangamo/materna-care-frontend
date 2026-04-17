@@ -14,34 +14,34 @@ export const menuItemsByRole = {
   pregnant: [
     {
       title: "Dashboard",
-      href: "/maternaCare/dashboard",
+      href: "/dashboard",
       icon: Home,
     },
     {
       title: "Appointments",
-      href: "/maternaCare/appointments",
+      href: "/appointments",
       icon: Calendar,
     },
     {
       title: "Exams",
-      href: "/maternaCare/exams",
+      href: "/exams",
       icon: FileText,
     },
     {
       title: "Monitoring",
-      href: "/maternaCare/monitoring",
+      href: "/monitoring",
       icon: BarChart3,
     },
    
     {
       title: "Messages",
-      href: "/maternaCare/messages",
+      href: "/messages",
       icon: MessageSquare,
     },
   
     {
       title: "Profile",
-      href: "/maternaCare/profile",
+      href: "/profile",
       icon: User,
     },
   ],
@@ -49,60 +49,60 @@ export const menuItemsByRole = {
   professional: [
     {
       title: "Dashboard",
-      href: "/maternaCare/dashboard",
+      href: "/dashboard",
       icon: Home,
     },
     
     {
       title: "Patients",
-      href: "/maternaCare/patients",
+      href: "/patients",
       icon: Users,
     },
 
     {
       title: "Appointments",
-      href: "/maternaCare/appointments",
+      href: "/appointments",
       icon: Calendar,
     },
 
      {
       title: "Messages",
-      href: "/maternaCare/messages",
+      href: "/messages",
       icon: MessageSquare,
     },
     {
       title: "Profile",
-      href: "/maternaCare/profile",
+      href: "/profile",
       icon: User,
     }
   ],
   admin: [
     {
       title: "Dashboard",
-      href: "/maternaCare/dashboard",
+      href: "/dashboard",
       icon: Home,
     },
     
     {
       title: "Patients",
-      href: "/maternaCare/patients",
+      href: "/patients",
       icon: Users,
     },
     {
       title: "Professionals",
-      href: "/maternaCare/professionals",
+      href: "/professionals",
       icon: Users,
     },
  
    {
       title: "Reports",
-      href: "/maternaCare/reports",
+      href: "/reports",
       icon: FileText,
     },
     
     {
       title: "Profile",
-      href: "/maternaCare/profile",
+      href: "/profile",
       icon: User,
     }
   ]

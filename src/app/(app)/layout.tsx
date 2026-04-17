@@ -1,10 +1,11 @@
 "use client";
 
 import { UserRole } from "@/enums/roles";
-import PregnantLayout from "../layouts/pregnantLayout";
+
 import { menuItemsByRole } from "@/config/menu";
-import AdminLayout from "../layouts/adminLayout";
-import ProfessionalLayout from "../layouts/professionalLayout";
+import PregnantLayout from "@/components/layouts/PregnantLayout";
+import ProfessionalLayout from "@/components/layouts/ProfessionalLayout";
+import AdminLayout from "@/components/layouts/AdminLayout";
 
 
 export default function RoleBasedLayout({

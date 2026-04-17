@@ -186,7 +186,7 @@ export default function LoginPage() {
                                         <button
                                             type="submit"
                                             disabled={loading}
-                                            onClick={() => router.push("/maternaCare/dashboard")}
+                                            onClick={() => router.push("/dashboard")}
                                             className="w-full py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 disabled:opacity-70"
                                         >
                                             {loading ? (
