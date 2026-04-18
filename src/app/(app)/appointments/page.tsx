@@ -32,8 +32,11 @@ export default function AppointmentRouter() {
     if (user?.role === "professional") return <ProfessionalDashboard user={user} />;
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <p className="text-gray-500 text-sm">Perfil desconhecido. Contacte o suporte.</p>
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#d242b0] to-[#9534e8] text-white">
+            <div className="flex flex-col items-center gap-3">
+                <div className="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+                <p className="text-sm">A carregar sistema...</p>
+            </div>
         </div>
     );
 }

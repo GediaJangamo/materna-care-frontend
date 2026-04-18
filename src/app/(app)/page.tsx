@@ -20,5 +20,5 @@ export default function DashboardPage() {
         return <AdminDashboard />;
     }
 
-    return <p>Perfil não reconhecido</p>;
+    return null;
 }
