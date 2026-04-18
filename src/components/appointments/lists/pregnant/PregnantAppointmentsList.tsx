@@ -129,7 +129,7 @@ export default function ListAppointment(user: any) {
                         <p className="text-sm text-gray-400 mt-1">Histórico e consultas agendadas</p>
                     </div>
                     <button
-                        onClick={() => router.push("/maternaCare/appointments/new")}
+                        onClick={() => router.push("appointments/new")}
                         className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-pink-500 to-violet-600 text-white font-bold rounded-2xl hover:opacity-90 transition-opacity shadow-lg shadow-pink-200 text-sm"
                     >
                         <Plus size={17} />

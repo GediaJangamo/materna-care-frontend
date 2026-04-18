@@ -190,7 +190,7 @@ export default function ExamesPage() {
                         Ex Next.js: <Link href="/exames/agendar"> 
                     */}
                     <a
-                        href="/maternaCare/exams/new"
+                        href="exams/new"
                         className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-pink-500 to-violet-600 text-white font-bold rounded-2xl hover:opacity-90 transition-opacity shadow-lg shadow-pink-200 text-sm"
                     >
                         <Plus size={17} /> Agendar exame

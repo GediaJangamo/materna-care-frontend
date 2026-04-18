@@ -1,5 +1,6 @@
 'use client'
-import ListAppointment from "@/pages/appointment/pregnantAppointment";
+
+import ListAppointment from "@/components/appointments/lists/pregnant/PregnantAppointmentsList";
 import ProfessionalDashboard from "@/components/dashboard/professional/professional";
 import { useState, useEffect } from "react";
 
