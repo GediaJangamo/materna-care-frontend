@@ -3,18 +3,15 @@ export default function Loader() {
         <div
             role="status"
             aria-live="polite"
-            className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[#d242b0] to-[#9534e8]"
+            aria-busy="true"
+            className="w-full h-screen flex items-center justify-center bg-white"
         >
-            <div className="flex flex-col items-center gap-4">
-
-
-                <div className="w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-
-
-                <p className="text-white text-sm md:text-base opacity-90">
-                    Loading...
-                </p>
+            <div className="flex gap-2">
+                <span className="w-2.5 h-2.5 bg-purple-600 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                <span className="w-2.5 h-2.5 bg-purple-600 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                <span className="w-2.5 h-2.5 bg-purple-600 rounded-full animate-bounce"></span>
             </div>
         </div>
     );
 }
+

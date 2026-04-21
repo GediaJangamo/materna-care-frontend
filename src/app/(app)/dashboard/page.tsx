@@ -1,4 +1,5 @@
 'use client'
+import Loader from "@/app/loading";
 import AdminDashboard from "@/components/dashboard/admin/admin";
 import PregnantDashboard from "@/components/dashboard/pregnant/pregnant";
 import ProfessionalDashboard from "@/components/dashboard/professional/professional";
@@ -27,6 +28,10 @@ export default function DashboardRouter() {
         }, 1400);
         return () => clearTimeout(t);
     }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
 
     if (user?.role === "pregnant") return <PregnantDashboard user={user} />;
     if (user?.role === "professional") return <ProfessionalDashboard user={user} />;

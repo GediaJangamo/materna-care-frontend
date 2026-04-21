@@ -7,6 +7,7 @@ import { menuItemsByRole } from "@/config/menu";
 import PregnantLayout from "@/components/layouts/PregnantLayout";
 import ProfessionalLayout from "@/components/layouts/ProfessionalLayout";
 import AdminLayout from "@/components/layouts/AdminLayout";
+import Loader from "../loading";
 
 export default function RoleBasedLayout({
     children,
@@ -28,16 +29,8 @@ export default function RoleBasedLayout({
 
 
     if (loading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#d242b0] to-[#9534e8] text-white">
-                <div className="flex flex-col items-center gap-3">
-                    <div className="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    <p className="text-sm">A carregar sessão...</p>
-                </div>
-            </div>
-        );
+        return <Loader />;
     }
-
 
     if (onlineUser === UserRole.PREGNANT) {
         return (
@@ -62,14 +55,5 @@ export default function RoleBasedLayout({
             </AdminLayout>
         );
     }
-
-    return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#d242b0] to-[#9534e8] text-white">
-            <div className="flex flex-col items-center gap-3">
-                <div className="w-10 h-10 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-                <p className="text-sm">A carregar sistema...</p>
-            </div>
-        </div>
-    );
 
 }
