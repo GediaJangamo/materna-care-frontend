@@ -51,15 +51,15 @@ export default function LoginPage() {
                     </div>
 
                     <h2 className="text-3xl font-bold text-white mb-4 leading-tight">
-                        Acompanhe sua gravidez<br />com confiança
+                        Track your pregnancy<br />with confidence
                     </h2>
                     <p className="text-pink-100 text-lg leading-relaxed max-w-sm mx-auto">
-                        Lembretes de consultas, hospitais próximos e o seu histórico médico sempre à mão.
+                        Appointment reminders, nearby hospitals, and your medical history always at hand.
                     </p>
 
 
                     <div className="mt-10 flex flex-wrap gap-3 justify-center">
-                        {["100% Gratuito", "Funciona Offline", "Dados Seguros"].map((badge) => (
+                        {["100% Free", "Works Offline", "Secure Data"].map((badge) => (
                             <div
                                 key={badge}
                                 className="flex items-center bg-white/15 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20"
@@ -94,7 +94,7 @@ export default function LoginPage() {
                                     : "bg-white text-gray-400 hover:text-gray-700"
                                     }`}
                             >
-                                ENTRAR
+                                LOGIN
                             </button>
                             <button
                                 onClick={() => setActiveTab("registar")}
@@ -103,7 +103,7 @@ export default function LoginPage() {
                                     : "bg-white text-gray-400 hover:text-gray-700"
                                     }`}
                             >
-                                CRIAR CONTA
+                                CREATE ACCOUNT
                             </button>
                         </div>
 
@@ -123,7 +123,7 @@ export default function LoginPage() {
 
                     <p className="text-center text-sm text-gray-400 mt-6">
                         <a href="/" className="hover:text-pink-500 transition-colors font-medium flex items-center justify-center gap-1">
-                            ← Voltar ao início
+                            ← Back to home
                         </a>
                     </p>
                 </div>
@@ -131,4 +131,3 @@ export default function LoginPage() {
         </div>
     );
 }
-

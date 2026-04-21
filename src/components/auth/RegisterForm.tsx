@@ -22,15 +22,15 @@ export default function RegisterForm() {
 
         <>
             <div className="mb-7">
-                <h1 className="text-2xl font-black text-gray-900 mb-1">Criar conta gratuita </h1>
-                <p className="text-gray-500 text-sm">Comece a acompanhar a sua gravidez hoje</p>
+                <h1 className="text-2xl font-black text-gray-900 mb-1">Create free account</h1>
+                <p className="text-gray-500 text-sm">Start tracking your pregnancy today</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Name */}
+
                 <div>
                     <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
-                        Nome Completo
+                        Full Name
                     </label>
                     <input
                         type="text"
@@ -42,10 +42,10 @@ export default function RegisterForm() {
                     />
                 </div>
 
-                {/* Phone */}
+
                 <div>
                     <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
-                        Número de Telefone
+                        Phone Number
                     </label>
                     <div className="flex gap-2">
                         <div className="bg-gray-50 border-2 border-gray-200 rounded-xl px-3 flex items-center text-sm font-bold text-gray-600 flex-shrink-0">
@@ -62,11 +62,11 @@ export default function RegisterForm() {
                     </div>
                 </div>
 
-                {/* Weeks - only for gestante */}
+
                 {role === "gestante" && (
                     <div>
                         <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
-                            Semanas de Gravidez (opcional)
+                            Pregnancy Weeks (optional)
                         </label>
                         <input
                             type="number"
@@ -80,10 +80,10 @@ export default function RegisterForm() {
                     </div>
                 )}
 
-                {/* Password */}
+
                 <div>
                     <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
-                        Palavra-passe
+                        Password
                     </label>
                     <div className="relative">
                         <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -91,7 +91,7 @@ export default function RegisterForm() {
                             type={showPassword ? "text" : "password"}
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            placeholder="Mínimo 8 caracteres"
+                            placeholder="Minimum 8 characters"
                             className="w-full pl-11 pr-12 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:bg-white transition-all"
                             required
                         />
@@ -105,21 +105,21 @@ export default function RegisterForm() {
                     </div>
                 </div>
 
-                {/* Terms */}
+
                 <label className="flex items-start gap-3 cursor-pointer group">
                     <div className="mt-0.5 w-5 h-5 rounded-md border-2 border-gray-300 group-hover:border-pink-400 flex items-center justify-center flex-shrink-0 transition-colors bg-white">
                         <CheckCircle className="w-3 h-3 text-pink-500 hidden" />
                     </div>
                     <p className="text-xs text-gray-500 leading-relaxed">
-                        Ao criar uma conta, aceito os{" "}
-                        <span className="text-pink-500 font-semibold hover:underline cursor-pointer">Termos de Uso</span>{" "}
-                        e a{" "}
-                        <span className="text-pink-500 font-semibold hover:underline cursor-pointer">Política de Privacidade</span>{" "}
-                        do MaternaCare.
+                        By creating an account, I agree to the{" "}
+                        <span className="text-pink-500 font-semibold hover:underline cursor-pointer">Terms of Use</span>{" "}
+                        and the{" "}
+                        <span className="text-pink-500 font-semibold hover:underline cursor-pointer">Privacy Policy</span>{" "}
+                        of MaternaCare.
                     </p>
                 </label>
 
-                {/* Submit */}
+
                 <button
                     type="submit"
                     disabled={loading}
@@ -128,11 +128,11 @@ export default function RegisterForm() {
                     {loading ? (
                         <>
                             <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                            A criar conta...
+                            Creating account...
                         </>
                     ) : (
                         <>
-                            Criar conta gratuita
+                            Create free account
                             <Heart className="w-4 h-4 fill-white" />
                         </>
                     )}
@@ -140,12 +140,11 @@ export default function RegisterForm() {
             </form>
 
             <p className="text-center text-sm text-gray-500 mt-6">
-                Já tem conta?{" "}
+                Already have an account?{" "}
                 <button
-                    // onClick={() => setActiveTab("entrar")}
                     className="text-pink-500 hover:text-pink-600 font-bold transition-colors"
                 >
-                    Entrar
+                    Sign in
                 </button>
             </p>
         </>

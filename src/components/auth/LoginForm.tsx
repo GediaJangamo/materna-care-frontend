@@ -24,8 +24,8 @@ export default function LoginForm() {
     return (
         <>
             <div className="mb-8">
-                <h1 className="text-2xl font-black text-gray-900 mb-1">Bem-vinda de volta </h1>
-                <p className="text-gray-500 text-sm">Entre na sua conta para continuar</p>
+                <h1 className="text-2xl font-black text-gray-900 mb-1">Welcome back</h1>
+                <p className="text-gray-500 text-sm">Sign in to your account to continue</p>
             </div>
 
 
@@ -33,7 +33,7 @@ export default function LoginForm() {
                 {/* Email */}
                 <div>
                     <label className="block text-xs font-bold text-gray-700 mb-2 uppercase tracking-wide">
-                        Email ou Telefone
+                        Email or Phone
                     </label>
                     <div className="relative">
                         <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -41,7 +41,7 @@ export default function LoginForm() {
                             type="text"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            placeholder="exemplo@email.com"
+                            placeholder="example@email.com"
                             className="w-full pl-11 pr-4 py-3.5 bg-gray-50 border-2 border-gray-200 rounded-xl text-gray-900 text-sm placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:bg-white transition-all"
                             required
                         />
@@ -52,13 +52,13 @@ export default function LoginForm() {
                 <div>
                     <div className="flex justify-between items-center mb-2">
                         <label className="block text-xs font-bold text-gray-700 uppercase tracking-wide">
-                            Palavra-passe
+                            Password
                         </label>
                         <button
                             type="button"
                             className="text-xs text-pink-500 hover:text-pink-600 font-semibold transition-colors"
                         >
-                            Esqueceu?
+                            Forgot?
                         </button>
                     </div>
                     <div className="relative">
@@ -91,11 +91,11 @@ export default function LoginForm() {
                     {loading ? (
                         <>
                             <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                            A entrar...
+                            Signing in...
                         </>
                     ) : (
                         <>
-                            Entrar na minha conta
+                            Sign in to my account
                             <ArrowRight className="w-4 h-4" />
                         </>
                     )}
@@ -103,12 +103,11 @@ export default function LoginForm() {
             </form>
 
             <p className="text-center text-sm text-gray-500 mt-6">
-                Não tem conta?{" "}
+                Don't have an account?{" "}
                 <button
-                    // onClick={() => setActiveTab("registar")}
                     className="text-pink-500 hover:text-pink-600 font-bold transition-colors"
                 >
-                    Criar gratuitamente
+                    Create one for free
                 </button>
             </p>
 
