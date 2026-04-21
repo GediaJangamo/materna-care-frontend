@@ -45,7 +45,7 @@ The system is designed with **three main roles**:
 
 ---
 
-## 🛠️ Development Approach
+##  Development Approach
 
 This project follows an **Incremental Development Model**, where features are built and delivered in phases.
 
