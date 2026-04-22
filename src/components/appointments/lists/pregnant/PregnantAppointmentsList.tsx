@@ -75,7 +75,7 @@ export default function ListAppointment(user: any) {
                         aria-label="Schedule new appointment"
                     >
                         <Plus size={14} aria-hidden="true" />
-                        Appointment
+                        New appointment
                     </button>
                 </div>
 
