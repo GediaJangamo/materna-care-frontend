@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 const consultasHistorico = [
     { id: 1, tipo: "Routine", data: "10 Jan 2026", hora: "09:00", profissional: "Dr. Ana Machava", especialidade: "Obstetrician", local: "HCM", status: "realizada", semanas: 24, notas: "Everything normal. Adequate weight." },

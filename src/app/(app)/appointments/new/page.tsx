@@ -28,7 +28,7 @@ export default function NewAppointmentRouter() {
         return () => clearTimeout(t);
     }, []);
 
-    if (user?.role === "pregnant") return <NewAppointment user={user} />;
+    if (user?.role === "pregnant") return <NewAppointment />;
     if (user?.role === "professional") return <ProfessionalDashboard user={user} />;
 
     return null;
